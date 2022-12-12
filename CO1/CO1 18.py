@@ -1,0 +1,20 @@
+dic1={
+    "bob":23,
+    "charlie":24,
+    "david":25,
+    "rick":26,
+    "anas":27,
+    "milly":28,
+    "alice":29,
+}
+dic2={
+    "ob":23,
+    "harlie":24,
+    "avid":25,
+    "rock":26,
+    "nas":27,
+    "mlly":28,
+    "aice":29,
+}
+#print(dic1|dic2)
+print({**dic1,**dic2})
