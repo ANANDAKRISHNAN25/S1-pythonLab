@@ -11,12 +11,12 @@ class Time:
         seconds=self.__s + tobj2.__s
         print("Sum of seconds",seconds)
         try:
-           if minutes >= 60:
-                hours=hours+1
-                minutes=minutes-60
+           while minutes >= 60:
+                 hours=hours+1
+                 minutes=minutes-60
            while seconds >= 60:
-                minutes=minutes+1
-                seconds=seconds-60
+                 minutes=minutes+1
+                 seconds=seconds-60
         except:
                print("can't be displayed")
         return hours,minutes,seconds
