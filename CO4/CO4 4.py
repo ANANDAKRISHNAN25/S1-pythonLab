@@ -10,15 +10,18 @@ class Time:
         print("Sum of minutes",minutes)
         seconds=self.__s + tobj2.__s
         print("Sum of seconds",seconds)
-        try:
-           while minutes >= 60:
-                 hours=hours+1
-                 minutes=minutes-60
-           while seconds >= 60:
-                 minutes=minutes+1
-                 seconds=seconds-60
-        except:
-               print("can't be displayed")
+        
+        if hours >= 24:
+            hours = hours%24
+            
+        if minutes >= 60:
+            hours=hours+minutes//60
+            minutes = minutes%60
+            
+        if seconds >= 60:
+            minutes=minutes+seconds//60
+            seconds=seconds%60
+        
         return hours,minutes,seconds
 print("Enter the time of 1st object:")
 tobj1=Time()
