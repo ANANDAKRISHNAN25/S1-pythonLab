@@ -23,7 +23,7 @@ class BankAccount:
 obj= BankAccount()
 while(True):
     print("\n1.Deposit Money \n2.Withdraw Money \n3.Exit")
-    ch=int(input("Enteer the choice :"))
+    ch=int(input("Enter the choice :"))
     if(ch==1):
         obj.deposit()
         
