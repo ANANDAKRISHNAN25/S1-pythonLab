@@ -1,30 +1,32 @@
 class Time:
     def __init__(self):
-        self.__h=int(input("Enter the time in hours:"))
-        self.__m=int(input("Enter the time in minutes:"))
-        self.__s=int(input("Enter the time in seconds:"))
-    def __add__(self,tobj2):
-        hours=self.__h + tobj2.__h
-        print("Sum of hours",hours)
-        minutes=self.__m + tobj2.__m
-        print("Sum of minutes",minutes)
-        seconds=self.__s + tobj2.__s
-        print("Sum of seconds",seconds)
+        self.__h=int(input("Enter the hour:"))
+        self.__m=int(input("Enter the minute:"))
+        self.__s=int(input("Enter the second:"))
+    def __add__(self,time2):
+        hour =self.__h + time2.__h
+
+        minute =self.__m + time2.__m
         
-        if hours >= 24:
-            hours = hours%24
-            
-        if minutes >= 60:
-            hours=hours+minutes//60
-            minutes = minutes%60
-            
-        if seconds >= 60:
-            minutes=minutes+seconds//60
-            seconds=seconds%60
-        
-        return hours,minutes,seconds
-print("Enter the time of 1st object:")
-tobj1=Time()
-print("Enter the time of 2nd object:")
-tobj2=Time()
-print("Sum of two time is: (Hour,Minutes,Seconds)",tobj1+tobj2)
+        second  =self.__s + time2.__s
+        if hour >=24:
+            hour=hour%24
+        if minute >=60:
+            hour =hour+int(minute/60)
+            minute=minute%60   
+        if second >=60:
+            minute =minute + int(second/60)
+            second =second%60  
+        #return second,minute,hour
+        print("sum of Hours:",hour)
+        print("sum of minute:",minute)
+        print("sum of second:",second)
+                 
+
+print("Time of first object")
+time1=Time()
+print("Time of second object")   
+time2=Time()    
+print("-------------------")    
+time1.__add__(time2)
+print("-------------------")    
